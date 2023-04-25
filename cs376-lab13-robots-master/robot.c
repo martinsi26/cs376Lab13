@@ -33,13 +33,21 @@ void robotPrintAscii(void)
   int i;
   char* blank = "                              ";
   blank = blank +30;
+  for (int i = 0; i < 3; i++) {
+    char* t = "";
+    if (i == 1) {
+      t = "\t";
+    }
+    if (i == 2) {
+      t = "\t\t";
+    }
   printf("\n\n"
-	 "UWR: Unidentified Wheeled Robot with 4 eyes\n"
-	 "%s    i_i    \n"
-	 "%s  [oo_oo]   \n"
-	 "%s  /|___|\\ \n"
-	 "%s   d   b   \n",blank, blank, blank, blank);
-
+         "%sUWR: Unidentified Wheeled Robot with 4 eyes\n"
+	 "%s%s    i_i    \n"
+	 "%s%s  [oo_oo]   \n"
+	 "%s%s  /|___|\\ \n"
+	 "%s%s   d   b   \n", t, t, blank, t, blank, t, blank, t, blank);
+  }
   blank = blank - 10;
 }
 
